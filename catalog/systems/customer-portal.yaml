@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: customer-portal
+  description: Customer-facing web portal for browsing and purchasing products
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - frontend
+    - customer-facing
+spec:
+  owner: developers
+  domain: ecommerce

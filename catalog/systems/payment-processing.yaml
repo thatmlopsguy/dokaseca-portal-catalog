@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: payment-processing
+  description: Backend system for processing payments and managing transactions
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - backend
+    - pci-compliant
+spec:
+  owner: developers
+  domain: payments

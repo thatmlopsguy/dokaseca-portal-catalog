@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: platform
+  description: Internal platform domain providing developer tools and infrastructure
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - internal
+    - developer-tools
+spec:
+  owner: platform-admins

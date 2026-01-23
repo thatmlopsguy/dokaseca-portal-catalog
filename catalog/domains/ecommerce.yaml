@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: ecommerce
+  description: E-commerce business domain handling all customer-facing shopping experiences
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - customer-facing
+    - revenue-generating
+spec:
+  owner: platform-admins

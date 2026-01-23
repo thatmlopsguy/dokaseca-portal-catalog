@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: payment-api
+  description: Secure payment processing API
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: techcorp/payment-api
+  tags:
+    - java
+    - rest-api
+    - pci-compliant
+  links:
+    - url: https://api.techcorp.com/payments
+      title: API Documentation
+      icon: docs
+spec:
+  type: service
+  lifecycle: production
+  owner: developers
+  system: payment-processing
+  dependsOn:
+    - resource:payment-database
+  providesApis:
+    - payment-api

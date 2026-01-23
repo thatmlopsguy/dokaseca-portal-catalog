@@ -1,0 +1,6 @@
+site_name: TechCorp Systems
+site_description: System architecture documentation for TechCorp
+nav:
+  - Home: index.md
+plugins:
+  - techdocs-core

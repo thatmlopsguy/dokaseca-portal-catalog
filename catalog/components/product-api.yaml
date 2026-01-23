@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: product-api
+  description: REST API for product catalog management
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: techcorp/product-api
+  tags:
+    - nodejs
+    - rest-api
+  links:
+    - url: https://api.techcorp.com/products
+      title: API Documentation
+      icon: docs
+spec:
+  type: service
+  lifecycle: production
+  owner: developers
+  system: customer-portal
+  dependsOn:
+    - resource:product-database
+  providesApis:
+    - product-api

@@ -1,0 +1,131 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: nodejs-microservice-gitops
+  title: Node.js Microservice with GitOps
+  description: Create a production-ready Node.js microservice with Dockerfile, Kubernetes manifests, ArgoCD application, and GitHub Actions CI/CD
+  tags:
+    - nodejs
+    - gitops
+    - argocd
+    - kubernetes
+    - recommended
+spec:
+  owner: platform-team
+  type: service
+
+  parameters:
+    - title: Service Information
+      required:
+        - name
+        - description
+        - owner
+      properties:
+        name:
+          title: Service Name
+          type: string
+          description: Unique name for the service (lowercase, no spaces)
+          pattern: '^[a-z0-9-]+$'
+          ui:autofocus: true
+        description:
+          title: Description
+          type: string
+          description: What does this service do?
+        owner:
+          title: Owner
+          type: string
+          description: Team that owns this service
+          ui:field: OwnerPicker
+          ui:options:
+            catalogFilter:
+              kind: Group
+
+    - title: Technical Configuration
+      required:
+        - system
+        - port
+      properties:
+        system:
+          title: System
+          type: string
+          description: Which system does this belong to?
+          ui:field: EntityPicker
+          ui:options:
+            catalogFilter:
+              kind: System
+        port:
+          title: Port
+          type: integer
+          description: Port the service listens on
+          default: 3000
+        database:
+          title: Database Type
+          type: string
+          description: Database to use (optional)
+          enum:
+            - none
+            - postgresql
+            - mongodb
+          default: none
+
+    - title: GitHub Configuration
+      required:
+        - repoUrl
+      properties:
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
+        repoVisibility:
+          title: Repository Visibility
+          type: string
+          description: Public or private repository
+          default: private
+          enum:
+            - public
+            - private
+
+  steps:
+    - id: fetch-skeleton
+      name: Fetch Skeleton
+      action: fetch:template
+      input:
+        url: ./skeleton
+        copyWithoutRender:
+          - .github/workflows/*
+        values:
+          name: ${{ parameters.name }}
+          description: ${{ parameters.description }}
+          owner: ${{ parameters.owner }}
+          system: ${{ parameters.system }}
+          port: ${{ parameters.port }}
+          database: ${{ parameters.database }}
+          repoUrl: ${{ parameters.repoUrl | parseRepoUrl }}
+
+    - id: publish
+      name: Publish to GitHub
+      action: publish:github
+      input:
+        repoUrl: ${{ parameters.repoUrl }}
+        description: ${{ parameters.description }}
+        defaultBranch: main
+        repoVisibility: ${{ parameters.repoVisibility }}
+        protectDefaultBranch: false
+
+    - id: register
+      name: Register in Catalog
+      action: catalog:register
+      input:
+        repoContentsUrl: ${{ steps['publish'].output.repoContentsUrl }}
+        catalogInfoPath: '/catalog-info.yaml'
+
+  output:
+    links:
+      - title: Repository
+        url: ${{ steps['publish'].output.remoteUrl }}
+      - title: Open in Catalog
+        icon: catalog
+        entityRef: ${{ steps['register'].output.entityRef }}

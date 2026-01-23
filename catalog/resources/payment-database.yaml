@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: payment-database
+  description: Encrypted PostgreSQL database for payment data
+  tags:
+    - postgresql
+    - database
+    - encrypted
+spec:
+  type: database
+  owner: developers
+  system: payment-processing

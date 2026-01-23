@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: techcorp-catalog
+  description: TechCorp complete catalog with domains, systems, components, resources, and templates
+spec:
+  targets:
+    # Domains
+    - ./domains/ecommerce.yaml
+    - ./domains/payments.yaml
+    - ./domains/platform.yaml
+
+    # Systems
+    - ./systems/customer-portal.yaml
+    - ./systems/payment-processing.yaml
+    - ./systems/developer-portal.yaml
+
+    # Components (Services)
+    - ./components/product-api.yaml
+    - ./components/payment-api.yaml
+    - ./components/catalog-backend.yaml
+
+    # Resources (Infrastructure)
+    - ./resources/product-database.yaml
+    - ./resources/payment-database.yaml
+    - ./resources/postgres-database.yaml
+
+    # Golden Path Templates
+    - ./templates/nodejs-microservice/template.yaml

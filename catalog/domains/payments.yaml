@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: payments
+  description: Payment processing domain handling all financial transactions
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - financial
+    - pci-compliant
+spec:
+  owner: platform-admins

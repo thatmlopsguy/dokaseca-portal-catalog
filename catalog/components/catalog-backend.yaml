@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: catalog-backend
+  description: Backstage catalog backend service
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - backstage
+    - typescript
+spec:
+  type: service
+  lifecycle: production
+  owner: platform-admins
+  system: developer-portal
+  dependsOn:
+    - resource:postgres-database

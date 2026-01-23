@@ -1,0 +1,6 @@
+site_name: TechCorp Business Domains
+site_description: Business domain documentation for TechCorp
+nav:
+  - Home: index.md
+plugins:
+  - techdocs-core
