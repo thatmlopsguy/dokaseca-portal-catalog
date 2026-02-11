@@ -5,12 +5,12 @@ metadata:
   description: REST API for product catalog management
   annotations:
     backstage.io/techdocs-ref: dir:.
-    github.com/project-slug: techcorp/product-api
+    github.com/project-slug: dokaseca/product-api
   tags:
     - nodejs
     - rest-api
   links:
-    - url: https://api.techcorp.com/products
+    - url: https://api.ookaseca.local/products
       title: API Documentation
       icon: docs
 spec:

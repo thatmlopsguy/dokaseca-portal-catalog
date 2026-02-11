@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: techcorp-catalog
-  description: TechCorp complete catalog with domains, systems, components, resources, and templates
+  name: dokaseca-catalog
+  description: Doka Seca complete catalog with domains, systems, components, resources, and templates
 spec:
   targets:
     # Domains

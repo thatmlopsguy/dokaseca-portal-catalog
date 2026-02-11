@@ -1,22 +1,25 @@
-# TechCorp Business Domains
+# Doka Seca Business Domains
 
-This documentation covers the business domains at TechCorp.
+This documentation covers the business domains at Doka Seca.
 
 ## Domain Architecture
 
-TechCorp is organized into three primary business domains:
+Doka Seca is organized into three primary business domains:
 
 ### E-commerce Domain
+
 - **Purpose**: Customer-facing shopping experiences
 - **Systems**: Customer Portal, Product APIs
 - **Focus**: Revenue generation and customer satisfaction
 
 ### Payments Domain
+
 - **Purpose**: Financial transactions and payment processing
 - **Systems**: Payment Processing, Transaction APIs
 - **Focus**: PCI compliance and financial security
 
 ### Platform Domain
+
 - **Purpose**: Internal developer tools and infrastructure
 - **Systems**: Developer Portal (Backstage), CI/CD
 - **Focus**: Developer experience and productivity

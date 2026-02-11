@@ -1,5 +1,5 @@
-site_name: TechCorp Services
-site_description: Service documentation for TechCorp microservices
+site_name: Doka Seca Services
+site_description: Service documentation for Doka Seca microservices
 nav:
   - Home: index.md
 plugins:

@@ -5,13 +5,13 @@ metadata:
   description: Secure payment processing API
   annotations:
     backstage.io/techdocs-ref: dir:.
-    github.com/project-slug: techcorp/payment-api
+    github.com/project-slug: dokaseca/payment-api
   tags:
     - java
     - rest-api
     - pci-compliant
   links:
-    - url: https://api.techcorp.com/payments
+    - url: https://api.dokaseca.local/payments
       title: API Documentation
       icon: docs
 spec:

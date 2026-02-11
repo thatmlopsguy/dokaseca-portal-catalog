@@ -1,10 +1,11 @@
-# TechCorp Systems
+# Doka Seca Systems
 
-This documentation covers the systems architecture at TechCorp.
+This documentation covers the systems architecture at Doka Seca.
 
 ## System Overview
 
 ### Customer Portal
+
 - **Domain**: E-commerce
 - **Type**: Frontend web application
 - **Purpose**: Customer-facing shopping interface
@@ -12,6 +13,7 @@ This documentation covers the systems architecture at TechCorp.
 - **Components**: Product API integration, shopping cart, checkout flow
 
 ### Payment Processing
+
 - **Domain**: Payments
 - **Type**: Backend system
 - **Purpose**: Process financial transactions securely
@@ -20,6 +22,7 @@ This documentation covers the systems architecture at TechCorp.
 - **Components**: Payment API, transaction processor, fraud detection
 
 ### Developer Portal
+
 - **Domain**: Platform
 - **Type**: Internal platform
 - **Purpose**: Developer experience and productivity tools

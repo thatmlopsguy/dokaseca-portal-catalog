@@ -1,5 +1,5 @@
-site_name: TechCorp Business Domains
-site_description: Business domain documentation for TechCorp
+site_name: Doka Seca Business Domains
+site_description: Business domain documentation for Doka Seca
 nav:
   - Home: index.md
 plugins:

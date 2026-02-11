@@ -1,10 +1,11 @@
-# TechCorp Services
+# Doka Seca Services
 
-This documentation covers the microservices at TechCorp.
+This documentation covers the microservices at Doka Seca.
 
 ## Service Catalog
 
 ### Product API
+
 - **System**: Customer Portal
 - **Technology**: Node.js, Express
 - **Purpose**: Manage product catalog and inventory
@@ -16,6 +17,7 @@ This documentation covers the microservices at TechCorp.
   - `DELETE /api/products/:id` - Remove product
 
 ### Payment API
+
 - **System**: Payment Processing
 - **Technology**: Java, Spring Boot
 - **Purpose**: Process payments securely
@@ -26,6 +28,7 @@ This documentation covers the microservices at TechCorp.
   - `POST /api/refunds` - Issue refund
 
 ### Catalog Backend
+
 - **System**: Developer Portal
 - **Technology**: Backstage, TypeScript
 - **Purpose**: Backend service for Backstage catalog
@@ -34,6 +37,7 @@ This documentation covers the microservices at TechCorp.
 ## Architecture Patterns
 
 All services follow these patterns:
+
 - **API Gateway**: Kong for external traffic
 - **Service Mesh**: Istio for internal communication
 - **Observability**: Prometheus metrics, Jaeger tracing

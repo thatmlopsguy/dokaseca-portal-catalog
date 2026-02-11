@@ -33,6 +33,7 @@ Run tests:
 This service is deployed via GitOps using ArgoCD.
 
 Push changes to the `main` branch to trigger:
+
 1. GitHub Actions runs tests
 2. Docker image is built and pushed to GHCR
 3. Kubernetes manifests are updated

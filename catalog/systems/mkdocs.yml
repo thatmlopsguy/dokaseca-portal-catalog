@@ -1,5 +1,5 @@
-site_name: TechCorp Systems
-site_description: System architecture documentation for TechCorp
+site_name: Doka Seca Systems
+site_description: System architecture documentation for Doka Seca
 nav:
   - Home: index.md
 plugins:

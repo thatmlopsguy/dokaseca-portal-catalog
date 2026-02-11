@@ -1,10 +1,10 @@
-# TechCorp Backstage Catalog
+# Doka Seca Backstage Catalog
 
-This repository contains the catalog entities for TechCorp's Backstage developer portal.
+This repository contains the catalog entities for Doka Seca's Backstage developer portal.
 
 ## Structure
 
-```
+```sh
 catalog/
 ├── all.yaml              # Root location file (Backstage entry point)
 ├── domains/              # Business domain definitions
